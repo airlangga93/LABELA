@@ -36,7 +36,7 @@ class ReportController extends Controller
      */
     public function store(Request $request)
     {
-        Report::create($request->all());
+        \App\Models\Report::create($request->all());
 
         return redirect('/report');
     }
@@ -54,7 +54,7 @@ class ReportController extends Controller
      */
     public function edit($id)
     {
-        Report::findOrFail($id);
+        $report = \App\Models\Report::findOrFail($id);
 
         return view('report.edit', compact('report'));
     }
@@ -64,7 +64,7 @@ class ReportController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $report = Report::findOrFail($id);
+        $report = \App\Models\Report::findOrFail($id);
 
         $report->update($request->all());
 
@@ -76,7 +76,7 @@ class ReportController extends Controller
      */
     public function destroy($id)
     {
-        Report::destroy($id);
+        \App\Models\Report::destroy($id);
 
         return redirect('/report');
     }
