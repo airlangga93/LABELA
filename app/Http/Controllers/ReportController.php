@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ReportController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Menampilkan daftar data resource.
      */
     public function index(Request $request)
     
@@ -24,7 +24,7 @@ class ReportController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Menampilkan form untuk membuat data baru.
      */
     public function create()
     {
@@ -32,7 +32,7 @@ class ReportController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Menyimpan data baru ke dalam database.
      */
     public function store(Request $request)
     {
@@ -42,7 +42,7 @@ class ReportController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Menampilkan detail data tertentu.
      */
     public function show(Report $report)
     {
@@ -50,7 +50,7 @@ class ReportController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Menampilkan form untuk mengedit data tertentu.
      */
     public function edit($id)
     {
@@ -60,7 +60,7 @@ class ReportController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Mengupdate data yang sudah ada di database.
      */
     public function update(Request $request, $id)
     {
@@ -72,7 +72,7 @@ class ReportController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Menghapus data dari database.
      */
     public function destroy($id)
     {
